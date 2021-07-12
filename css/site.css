@@ -1,0 +1,231 @@
+.shema > * {
+    transform: scale(1)!important;
+}
+.content {
+    padding: 0px 50px;    
+}
+.tools {
+    background: #ccc;
+    border: 1px solid #999;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px 0px;
+}
+.shema {
+    min-height: 600px;
+    height: calc(100vh - 210px);
+    border: 1px solid #999;
+    border-radius: 5px;
+    display: flex;
+    flex-grow: 1;
+    margin: 5px 0;
+    padding: 18px;
+    overflow:auto;
+    position: relative;
+    }
+.schem-list td:first-child {
+    opacity: 0.8;
+    font-size: 85%;
+}
+.iconify {
+    width: 24px; height: 24px;
+    vertical-align: middle;
+    display: inline-block;
+    margin: 0 10px 7px 0;
+    color: #999;
+}
+.login-form {
+    width: 600px;
+    margin: 50px auto;
+    padding: 50px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    background-color: #f0f0f0;
+}
+.login-form>h1 {
+    margin-bottom: 30px;
+}
+.errors {
+    color: #900;
+    margin-bottom: 30px;
+}
+.shema>.block-item {
+    margin: 0 auto auto auto;
+}
+.shema>.block-item>.block-linetop {
+    display: none;
+}
+.block-header {
+    background: #cdf;
+    margin: 5px auto 15px auto;
+    padding: 10px 15px;
+    border: 1px solid #abc;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+}
+.block-header input[type="text"] {
+    text-align: center;
+    border: 1px solid transparent;
+    background: none;
+    outline: none;
+    min-width: 120px;
+    font-weight: bold;
+    color: rgb(41, 79, 104);
+}
+.block-item.selected>.block-header input[type="text"] {
+    border-bottom: 1px solid #333;
+    background: none;
+    background-color: rgba(255,255,255,0.3);
+}
+
+.block-item {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid transparent;
+    min-height: 100px;		
+    margin: 30px 10px 10px 10px;
+    padding: 5px;
+    position: relative;
+    z-index: 10;
+}
+.right-back {
+    position: absolute;
+    top: 35px;
+    right: 5px;
+    bottom: 0;
+    width: 50%;
+    border-top: 2px solid #999;
+    border-right: 2px solid #999;
+    display: none;
+}
+.right-back::before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-right: 13px solid #999;
+    border-bottom: 5px solid transparent;
+    position: absolute;
+    left: -5px;
+    top: -6px;
+}
+.right-back.visible {
+    display: block;
+}
+
+.arrow-back {
+    position: absolute;
+    width: 50%;
+    left: 50%;
+    border-top: 2px solid #999;
+    display: none;
+
+}
+.arrow-back.visible {
+    display: block;
+}
+.bot-back {
+    position: absolute;
+    border-left: 2px solid #999;
+    width: 0;
+    height: 28px;
+    bottom: -29px;
+    left: 50%;
+    display: none;
+}
+.bot-back.visible {
+    display: block;
+}
+.block-container {
+    display: flex;
+    justify-content: center;
+}
+.block-item.selected {
+    border-color: #f00;
+    border-style: dotted;
+    border-radius: 10px;
+}
+.block-linetop {
+    position: absolute;
+    border-left: 2px solid #999;
+    width: 0;
+    height: 25px;
+    top: -20px;
+    left: 50%;
+}
+.block-linetop::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-top: 13px solid #999;
+    border-right: 5px solid transparent;
+    position: absolute;
+    left: -6px;
+    top: 17px;
+}
+.block-linebot {
+    position: absolute;
+    border-left: 2px solid #999;
+    width: 0;
+    height: 27px;
+    bottom: -28px;
+    left: 50%;
+}
+.block-header:not(.children-exist) .block-linebot {
+    display: none;
+}
+.block-border {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: -18px;
+    left: calc(50% + 10px);
+    white-space: nowrap;
+    font-size: 20px;
+}
+.block-linegor {
+    position: absolute;
+    border-top: 2px solid #999;
+    height: 0;
+    top: -20px;
+    left: -11px;
+    right: -11px;
+}
+.block-item:first-child>.block-linegor {
+    left: 50%;
+}
+.block-item:last-child>.block-linegor {
+    right: 50%;
+}
+.settings {
+    width:300px;
+    background: #ccc;
+    margin: 5px 0px 5px 10px;
+    border: 1px solid #999;
+    border-radius: 5px;
+    padding: 20px;
+}
+.settings h2 {
+    overflow: hidden;
+}
+.schema-name {
+    display: inline-block;
+    padding: 1px 2px;
+    border: 2px solid transparent;
+}
+.name-edit .schema-name {
+    display: none;
+}
+.schema-name-input{
+    padding: 1px 2px!important;
+    outline: none;
+}
+.name-edit .schema-name-input {
+    display: inline-block!important;
+    font: inherit;
+    
+}
